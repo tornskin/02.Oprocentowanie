@@ -46,8 +46,39 @@ loan_interest_rate = float(input("Podaj oprocentowanie kredytu: "))
 loan_amount = float(input("Podaj kwotę kredytu: "))
 installment_amount = float(input("Podaj wysokość raty: "))
 
+print_formula = 'Twoja pozostała kwota kredytu to {loan_to_pay}, to {rate_diff} mniej niż w poprzednim miesiącu'
+
 month_1 = (1 + ((Inflacja1+loan_interest_rate)/1200)) * loan_amount - installment_amount
 month_2 = (1 + ((Inflacja2+loan_interest_rate)/1200)) * month_1 - installment_amount
+month_3 = (1 + ((Inflacja3+loan_interest_rate)/1200)) * month_2 - installment_amount
+month_4 = (1 + ((Inflacja4+loan_interest_rate)/1200)) * month_3 - installment_amount
+month_5 = (1 + ((Inflacja5+loan_interest_rate)/1200)) * month_4 - installment_amount
+month_6 = (1 + ((Inflacja6+loan_interest_rate)/1200)) * month_5 - installment_amount
+month_7 = (1 + ((Inflacja7+loan_interest_rate)/1200)) * month_6 - installment_amount
+month_8 = (1 + ((Inflacja8+loan_interest_rate)/1200)) * month_7 - installment_amount
+month_9 = (1 + ((Inflacja9+loan_interest_rate)/1200)) * month_8 - installment_amount
+month_10 = (1 + ((Inflacja10+loan_interest_rate)/1200)) * month_9 - installment_amount
+month_11 = (1 + ((Inflacja11+loan_interest_rate)/1200)) * month_10 - installment_amount
+month_12 = (1 + ((Inflacja12+loan_interest_rate)/1200)) * month_11 - installment_amount
+month_13 = (1 + ((Inflacja13+loan_interest_rate)/1200)) * month_12 - installment_amount
+month_14 = (1 + ((Inflacja14+loan_interest_rate)/1200)) * month_13 - installment_amount
+month_15 = (1 + ((Inflacja15+loan_interest_rate)/1200)) * month_14 - installment_amount
+month_16 = (1 + ((Inflacja16+loan_interest_rate)/1200)) * month_15 - installment_amount
+month_17 = (1 + ((Inflacja17+loan_interest_rate)/1200)) * month_16 - installment_amount
+month_18 = (1 + ((Inflacja18+loan_interest_rate)/1200)) * month_17 - installment_amount
+month_19 = (1 + ((Inflacja19+loan_interest_rate)/1200)) * month_18 - installment_amount
+month_20 = (1 + ((Inflacja20+loan_interest_rate)/1200)) * month_19 - installment_amount
+month_21 = (1 + ((Inflacja21+loan_interest_rate)/1200)) * month_20 - installment_amount
+month_22 = (1 + ((Inflacja22+loan_interest_rate)/1200)) * month_21 - installment_amount
+month_23 = (1 + ((Inflacja23+loan_interest_rate)/1200)) * month_22 - installment_amount
+month_24 = (1 + ((Inflacja24+loan_interest_rate)/1200)) * month_23 - installment_amount
 
-print_formula = f'Twoja pozostała kwota kredytu to {month_1}, to {loan_amount - month_1} mniej niż w poprzednim miesiącu'
-print(print_formula)
+
+print(print_formula.format(loan_to_pay=month_1, rate_diff=loan_amount - month_1))
+print(print_formula.format(loan_to_pay=month_2, rate_diff=month_1 - month_2))
+print(print_formula.format(loan_to_pay=month_3, rate_diff=month_2 - month_3))
+print(print_formula.format(loan_to_pay=month_4, rate_diff=month_3 - month_4))
+print(print_formula.format(loan_to_pay=month_5, rate_diff=month_4 - month_5))
+print(print_formula.format(loan_to_pay=month_6, rate_diff=month_5 - month_6))
+print(print_formula.format(loan_to_pay=month_7, rate_diff=month_6 - month_7))
+print(print_formula.format(loan_to_pay=month_8, rate_diff=month_7 - month_8))
