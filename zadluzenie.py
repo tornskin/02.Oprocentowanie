@@ -45,3 +45,9 @@ Inflacja24 = 1.499708521
 loan_interest_rate = float(input("Podaj oprocentowanie kredytu: "))
 loan_amount = float(input("Podaj kwotę kredytu: "))
 installment_amount = float(input("Podaj wysokość raty: "))
+
+month_1 = (1 + ((Inflacja1+loan_interest_rate)/1200)) * loan_amount - installment_amount
+month_2 = (1 + ((Inflacja2+loan_interest_rate)/1200)) * month_1 - installment_amount
+
+print_formula = f'Twoja pozostała kwota kredytu to {month_1}, to {loan_amount - month_1} mniej niż w poprzednim miesiącu'
+print(print_formula)
